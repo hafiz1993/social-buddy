@@ -37,14 +37,11 @@ const useStyles = makeStyles({
 
 
 const PostDetails = () => {
-    let { id } = useParams() //from App.js router
-
-    //
+    let { id } = useParams() 
     let user = parseInt(id);
     if (user < 1 || user > 100) {
         document.location.href = "/NotFound";
     }
-    //console.log("details of ", id,user)
 
     const [nextId, setNextId] = useState(parseInt(id))
     const [post, setPost] = useState({})
